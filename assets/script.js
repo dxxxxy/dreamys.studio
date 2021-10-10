@@ -13,7 +13,7 @@ document.getElementById("youtube").addEventListener("click", e => {
 })
 
 document.getElementById("discord").addEventListener("click", e => {
-    alert("DxxxxY#5818")
+    alert("dxxxxy#5818")
 })
 
 document.getElementById("website").addEventListener("click", e => {

@@ -6,23 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/styles.css" rel="stylesheet">
     <style>
-        button:focus {
-            outline: none;
+        body {
+            background-color: black;
+            background-image: url('assets/bg.png');
+            overflow: hidden;
+            font-family: Poppins;
+        }
+        
+        .trans {
+            transition: 500ms ease-in-out;
+        }
+        
+        #container {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #card {
+            background-color: rgba(156, 163, 175, 0.2);
+            width: 16vw;
+            height: 10.5vw;
+            border-radius: 0.7rem;
+            text-align: center;
+            border: 1px solid white;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        img {
+            width: 1.8vw;
+            height: 1.8vw;
+            margin: 0 0.5vw 0;
+        }
+        
+        #title {
+            font-weight: bold;
+            color: white;
+            font-size: 3vw;
+            margin: 1vw 0 -0.5vw;
+        }
+        
+        #subtitle {
+            margin: 0 0 1vw;
+            font-weight: bold;
+            font-size: 0.95vw;
+            color: white;
         }
     </style>
 </head>
 
-<body style="background-color:black; background-image: url('assets/bg.png'); transform: scale(1.1, 1.1);" class="overflow-hidden">
-    <div id="particles-js" style="transform: translateY(-50%); position:static">
-        <div class="flex items-center justify-center h-screen" style="transform: translateY(100%);">
-            <div class="bg-gray-400 text-white font-bold rounded-lg border shadow-lg p-10 bg-opacity-20">
-                <p class="text-5xl text-center">DxxxxY</p>
-                <p class="text-base text-center">Full-stack Developer</p>
+<body>
+    <div id="particles-js">
+        <div id="container">
+            <div id="card">
+                <p id="title">DxxxxY</p>
+                <p id="subtitle">Full-stack Developer</p>
                 <div class="flex">
-                    <img src="assets/logos/github.png" id="github" alt="" width="20px" class="mt-3 -mb-4 ml-4" style="transition: 0.25s ease-in;" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
-                    <img src="assets/logos/youtube.png" id="youtube" alt="" width="20px" class="mt-3 -mb-4 ml-4" style="transition: 0.25s ease-in;" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
-                    <img src="assets/logos/discord.png" id="discord" alt="" width="20px" class="mt-3 -mb-4 ml-4" style="transition: 0.25s ease-in;" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
-                    <img src="assets/logos/website.png" id="website" alt="" width="20px" class="mt-3 -mb-4 ml-4" style="transition: 0.25s ease-in;" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
+                    <img src="assets/logos/github.png" class="trans" id="github" alt="" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
+                    <img src="assets/logos/youtube.png" class="trans" id="youtube" alt="" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
+                    <img src="assets/logos/discord.png" class="trans" id="discord" alt="" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
+                    <img src="assets/logos/website.png" class="trans" id="website" alt="" onmouseover="this.style.filter = 'invert(1)'; this.style.cursor = 'pointer'" onmouseout="this.style.filter = 'invert(0)'">
                 </div>
             </div>
         </div>
