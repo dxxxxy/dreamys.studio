@@ -1,12 +1,14 @@
-body {
-    background-color: black;
-    background-image: url('bg.png');
-    overflow: hidden;
-    font-family: Poppins;
+* {
+    color: white;
+    font-weight: bold;
+    transition: filter 500ms ease-in-out;
 }
 
-.trans {
-    transition: 500ms ease-in-out;
+body {
+    background-color: black;
+    margin: 0;
+    background-image: url('bg.png');
+    font-family: Poppins, sans-serif;
 }
 
 #container {
@@ -19,12 +21,16 @@ body {
 }
 
 #card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     background-color: rgba(156, 163, 175, 0.2);
     width: 16vw;
     height: 10.5vw;
-    border-radius: 0.7rem;
-    text-align: center;
+    border-radius: 0.5vw;
     border: 1px solid white;
+    padding: 1vw;
 }
 
 #particles-js {
@@ -33,22 +39,28 @@ body {
     height: 100vh;
 }
 
+.img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    line-height: 2vw;
+}
+
 img {
-    width: 1.8vw;
-    height: 1.8vw;
-    margin: 0 0.5vw 0;
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
 }
 
 #title {
-    font-weight: bold;
-    color: white;
     font-size: 3vw;
-    margin: 1vw 0 -0.5vw;
 }
 
 #subtitle {
-    margin: 0 0 1vw;
-    font-weight: bold;
-    font-size: 0.95vw;
-    color: white;
+    font-size: 1.2vw;
 }
