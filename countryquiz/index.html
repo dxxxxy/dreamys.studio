@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+</head>
+
+<body>
+    <div id="menu">
+        <p id="welcome">Welcome to <span id="name">DreamY's Country Quiz</span></p>
+        <input type="number" list="quantities" id="numberQuestions" placeholder="10 or choose"><br>
+        <datalist id="quantities">
+            <option value="5">
+            <option value="10">
+            <option value="20">
+            <option value="50">
+            <option value="100">
+            <option value="200">
+        </datalist>
+        <input type="button" id="startButton" value="Start Quiz" onclick="startQuiz()">
+    </div>
+    <p id="question">What is the capital of <span id="countryQuestion"></span>?</p>
+    <p id="questionCounter"></p>
+    <div id="questionBar"></div>
+    <div id="barBorder"></div>
+    <div id="answerChoice">
+        <div id="choice1" onclick="checkAnswer1()"></div>
+        <div id="choice2" onclick="checkAnswer2()"></div>
+        <div id="choice3" onclick="checkAnswer3()"></div>
+        <div id="choice4" onclick="checkAnswer4()"></div>
+    </div>
+    <div id="end">
+        <p id="ending">Congrats, you've got <br><span id="results"></span><br>questions<br><br>with<br><br><span id="acc"></span><br>accuracy</p>
+    </div>
+    <input type="button" id="restart" value="Try Again" onclick="location.reload()">
+    <script src="functions.js"></script>
+    <script src="script.js"></script>
+    <script src="hovers.js"></script>
+</body>
+
+</html>

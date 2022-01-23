@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamY's Aim Trainer</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <div id="login">
+        <a id="welcome">DreamY's Aim Trainer</a>
+        <input type="text" id="log1" placeholder="Username">
+        <input type="text" id="log2" placeholder="Password">
+        <input type="button" id="submit" onclick="login()" value="Login"><br>
+        <a id="databasestatus"></a>
+    </div>
+    <div id="modes">
+        <a id="welcome">DreamY's Aim Trainer</a>
+        <input type="button" id="mode1" onclick="express()" value="Express">
+        <input type="button" id="mode2" onclick="custom()" value="Custom">
+    </div>
+    <div id="express">
+    </div>
+    <div id="stats">
+        <a id="hits"></a>
+        <a id="accuracy"></a>
+        <a id="score"></a>
+        <div id="progressbar"></div>
+    </div>
+    <div id="custom">
+        <!-- Not yet implemented -->
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
