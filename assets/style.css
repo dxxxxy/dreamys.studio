@@ -1,66 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 * {
     color: white;
     font-weight: bold;
     transition: filter 500ms ease-in-out;
+    font-family: 'Rubik', sans-serif;
+    user-select: none;
 }
 
 body {
-    background-color: black;
     margin: 0;
-    background-image: url('bg.png');
-    font-family: Poppins, sans-serif;
 }
 
-#container {
+.bg {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
 }
 
-#card {
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
-    background-color: rgba(156, 163, 175, 0.2);
-    width: 16vw;
-    height: 10.5vw;
-    border-radius: 0.5vw;
-    border: 1px solid white;
-    padding: 1vw;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+.container :not(img) {
+    background-color: rgba(20, 20, 20, 0.8);
 }
 
 .img {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 20vw;
+    margin: 1vw 2.5vw 0;
     align-items: center;
-    width: 100%;
+    border-radius: 2vw;
 }
 
 p {
-    margin: 0;
-    line-height: 2vw;
+    margin: 0 2.5vw 0;
 }
 
 img {
     width: 2.5vw;
     height: 2.5vw;
     cursor: pointer;
+    filter: invert(1);
 }
 
-#title {
-    font-size: 3vw;
+.title {
+    font-size: 5vw;
 }
 
-#subtitle {
+.subtitle {
     font-size: 1.2vw;
 }
