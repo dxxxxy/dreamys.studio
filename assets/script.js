@@ -19,8 +19,10 @@ VANTA.WAVES({
 //links
 document.getElementById("github").addEventListener("click", () => window.location.href = "https://github.com/DxxxxY")
 document.getElementById("youtube").addEventListener("click", () => window.location.href = "https://www.youtube.com/channel/UCXLcxUX7GicuOisj8wZ8p2Q")
-document.getElementById("discord").addEventListener("click", () => alert("dxxxxy#0776"))
-document.getElementById("website").addEventListener("click", () => window.location.href = "https://dreamysoft.net")
+document.getElementById("discord").addEventListener("click", () => {
+    navigator.clipboard.writeText("dxxxxy#0776")
+    alert("Copied to clipboard")
+})
 
 //img automation
 document.querySelectorAll("img").forEach(e => {
