@@ -1,6 +1,17 @@
 //prevent right click
 document.addEventListener("contextmenu", event => event.preventDefault());
 
+//on load
+document.addEventListener("DOMContentLoaded", (e) => {
+    document.querySelector(".container").style.height = "70vh"
+    document.querySelector(".container").style.transition = "height 0.5s cubic-bezier(0,1,0,1)"
+
+    document.querySelectorAll(".anim").forEach((el) => {
+        el.style.transition = "opacity 0.25s ease-in-out";
+        el.style.opacity = 1
+    })
+})
+
 //bg canvas
 VANTA.WAVES({
     el: ".bg",
