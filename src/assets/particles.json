@@ -1,0 +1,196 @@
+{
+    "background": {
+        "color": {
+            "value": "transparent"
+        },
+        "image": null,
+        "position": "50% 50%",
+        "repeat": "no-repeat",
+        "size": "cover"
+    },
+    "fullScreen": {
+        "zIndex": 1
+    },
+    "fpsLimit": 144,
+    "interactivity": {
+        "events": {
+            "onClick": {
+                "mode": "push"
+            },
+            "onHover": {
+                "mode": "bubble",
+                "parallax": {
+                    "force": 60
+                }
+            },
+            "resize": false
+        },
+        "modes": {
+            "bubble": {
+                "distance": 400,
+                "duration": 2,
+                "opacity": 1,
+                "size": 40,
+                "divs": {
+                    "distance": 200,
+                    "duration": 0.4,
+                    "mix": false,
+                    "selectors": []
+                }
+            },
+            "grab": {
+                "distance": 400
+            },
+            "repulse": {
+                "divs": {
+                    "distance": 200,
+                    "duration": 0.4,
+                    "factor": 100,
+                    "speed": 1,
+                    "maxSpeed": 50,
+                    "easing": "ease-out-quad",
+                    "selectors": []
+                }
+            }
+        }
+    },
+    "particles": {
+        "color": {
+            "value": "#ffffff"
+        },
+        "links": {
+            "color": {
+                "value": "#323031"
+            },
+            "distance": 150,
+            "opacity": 0.4
+        },
+        "move": {
+            "attract": {
+                "rotate": {
+                    "x": 600,
+                    "y": 1200
+                }
+            },
+            "enable": true,
+            "path": {},
+            "outModes": {
+                "default": "out",
+                "bottom": "out",
+                "left": "out",
+                "right": "out",
+                "top": "out"
+            },
+            "speed": 6,
+            "spin": {}
+        },
+        "number": {
+            "density": {
+                "enable": true
+            },
+            "value": 10
+        },
+        "opacity": {
+            "animation": {
+                "speed": 1,
+                "minimumValue": 0.1
+            }
+        },
+        "rotate": {
+            "random": {
+                "enable": true,
+                "minimumValue": 3
+            },
+            "value": {
+                "min": 3,
+                "max": 7
+            },
+            "animation": {
+                "enable": true,
+                "speed": 10
+            }
+        },
+        "shape": {
+            "options": {
+                "character": {
+                    "fill": false,
+                    "font": "Verdana",
+                    "style": "",
+                    "value": "*",
+                    "weight": "400"
+                },
+                "char": {
+                    "fill": false,
+                    "font": "Verdana",
+                    "style": "",
+                    "value": "*",
+                    "weight": "400"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "star": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "height": 256,
+                    "replace_color": true,
+                    "src": "https://i.imgur.com/tF081mg.png",
+                    "width": 256
+                },
+                "images": {
+                    "height": 256,
+                    "replace_color": true,
+                    "src": "https://i.imgur.com/tF081mg.png",
+                    "width": 256
+                }
+            },
+            "type": "image"
+        },
+        "size": {
+            "random": {
+                "enable": true,
+                "minimumValue": 64
+            },
+            "value": {
+                "min": 64,
+                "max": 256
+            },
+            "animation": {
+                "speed": 40,
+                "minimumValue": 0.1
+            }
+        },
+        "stroke": {
+            "color": {
+                "value": "#000000",
+                "animation": {
+                    "h": {
+                        "count": 0,
+                        "enable": false,
+                        "offset": 0,
+                        "speed": 1,
+                        "decay": 0,
+                        "sync": true
+                    },
+                    "s": {
+                        "count": 0,
+                        "enable": false,
+                        "offset": 0,
+                        "speed": 1,
+                        "decay": 0,
+                        "sync": true
+                    },
+                    "l": {
+                        "count": 0,
+                        "enable": false,
+                        "offset": 0,
+                        "speed": 1,
+                        "decay": 0,
+                        "sync": true
+                    }
+                }
+            }
+        }
+    }
+}
