@@ -3,8 +3,8 @@ document.addEventListener("contextmenu", event => event.preventDefault());
 
 //on load
 document.addEventListener("DOMContentLoaded", (e) => {
-
     let i = 0
+
     document.querySelectorAll(".anim").forEach((el) => {
         el.style.transform = "translateY(-100vh)"
         el.style.opacity = "0"
@@ -14,12 +14,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
             el.style.transform = "translateY(0)"
             el.style.opacity = "1"
         }, 500 * i)
+
         i++
     })
 });
-
-//bg canvas
-particlesJS.load("particles", "assets/particles.json", () => console.log("particles loaded"));
 
 //img automation
 document.querySelectorAll("img").forEach(e => {
@@ -29,6 +27,10 @@ document.querySelectorAll("img").forEach(e => {
     e.addEventListener("mouseout", () => e.style.filter = "invert(1)")
 })
 
+//particles
+particlesJS.load("particles", "assets/particles.json", () => console.log("particles loaded"));
+
+//fullpage
 new fullpage("#fullpage", {
     anchors: [
         "home",
