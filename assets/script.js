@@ -1,23 +1,5 @@
 //prevent right click
-document.addEventListener("contextmenu", event => event.preventDefault());
-
-//on load
-document.addEventListener("DOMContentLoaded", (e) => {
-    let i = 0
-
-    document.querySelectorAll(".anim").forEach((el) => {
-        el.style.transform = "translateY(-100vh)"
-        el.style.opacity = "0"
-
-        setTimeout(() => {
-            el.style.transition = "transform 1s cubic-bezier(0,1,0,1), opacity 1s ease-in-out"
-            el.style.transform = "translateY(0)"
-            el.style.opacity = "1"
-        }, 500 * i)
-
-        i++
-    })
-});
+document.addEventListener("contextmenu", event => event.preventDefault())
 
 //img automation
 document.querySelectorAll("img").forEach(e => {
@@ -28,25 +10,63 @@ document.querySelectorAll("img").forEach(e => {
 })
 
 //particles
-particlesJS.load("particles", "assets/particles.json", () => console.log("particles loaded"));
+particlesJS.load("particles", "assets/particles.json", () => console.log("particles loaded"))
+
+//helpers
+const animate = (el, i) => {
+    setTimeout(() => {
+        el.style.transition = "transform 1s cubic-bezier(0,1,0,1), opacity 1s ease-in-out"
+        el.style.transform = "translateY(0)"
+        el.style.opacity = "1"
+    }, 250 * i)
+}
+
+const reset = (el) => {
+    el.style.transition = "none"
+    el.style.transform = "translateY(-100vh)"
+    el.style.opacity = "0"
+}
 
 //fullpage
 new fullpage("#fullpage", {
-    anchors: [
-        "home",
-        "footer"
-    ],
     navigation: true,
     navigationPosition: "left",
+    licenseKey: "",
     navigationTooltips: [
         "Home",
-        "Footer"
+        "Subdomain Navigation",
     ],
     slidesNavigation: true,
-    scrollingSpeed: "1000",
-    fitToSectionDelay: "600",
+    scrollingSpeed: "750",
     scrollOverflow: false,
     controlArrows: true,
-    lazyLoading: true,
-    rtl: false
-});
+    rtl: false,
+
+    afterRender: () => {
+        let i = 0
+
+        //perform first animation
+        document.querySelectorAll(".fp-section.active .anim").forEach(el => {
+            reset(el)
+            animate(el, i)
+            i++
+        })
+    },
+
+    onLeave: (origin, destination, direction) => {
+        //prepare for next animation
+        destination.item.querySelectorAll(".anim").forEach(el => reset(el))
+    },
+
+    afterLoad: (origin, destination, direction) => {
+        let i = 0
+
+        //perform next animation
+        destination.item.querySelectorAll(".anim").forEach(el => {
+            animate(el, i)
+
+            i++
+        })
+    }
+})
+

@@ -21,7 +21,7 @@ div#particles {
     filter: blur(10px) invert(1) hue-rotate(230deg) brightness(1);
 }
 
-.container {
+header {
     position: absolute;
     top: 0;
     width: 100vw;
@@ -32,28 +32,25 @@ div#particles {
     justify-content: center;
 }
 
-.container :not(img) {
+header > *, 
+.container > * {
     background-color: rgba(20, 20, 20, 0.7);
 }
 
-.img {
+.container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    width: 20vw;
-    margin: 1vw 2.5vw 0;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 p {
     font-size: 0.8vw;
-    margin: 0 2.5vw 0;
-}
-
-img {
-    width: 2.5vw;
-    height: 2.5vw;
-    cursor: pointer;
-    filter: invert(1);
+    margin: 0 3vw 0;
 }
 
 .title {
@@ -73,11 +70,12 @@ a[href="https://alvarotrigo.com/fullPage/"] {
 }
 
 footer {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    min-height: 10vh;
+    height: 10vh;
     bottom: 0;
     background-color: rgba(20, 20, 20, 0.7);
 }
