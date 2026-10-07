@@ -77,10 +77,10 @@ new fullpage("#fullpage", {
     licenseKey: "",
     navigationTooltips: [
         "Home",
-        "Open-source Projects",
+        "Subdomain Navigation",
+        "Open-Source Projects",
         "Experience",
         "Education",
-        "Subdomain Navigation",
     ],
     slidesNavigation: true,
     scrollingSpeed: "750",
